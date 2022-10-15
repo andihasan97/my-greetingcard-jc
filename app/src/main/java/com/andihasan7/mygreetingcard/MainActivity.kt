@@ -3,17 +3,14 @@ package com.andihasan7.mygreetingcard
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.andihasan7.mygreetingcard.ui.theme.MyGreetingCardTheme
 
@@ -34,8 +31,8 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun BirthdayGreetingWithText(message: String, from: String) {
     // fungsi text, mengubah ukuran text ke 36 sp
-    // row untuk tampilan secara horizontal
-    Row {
+    // column untuk tampilan secara vertical
+    Column {
         Text(text = message,
             fontSize = 36.sp
         )
