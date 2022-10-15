@@ -13,6 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.andihasan7.mygreetingcard.ui.theme.MyGreetingCardTheme
 
 class MainActivity : ComponentActivity() {
@@ -23,24 +24,29 @@ class MainActivity : ComponentActivity() {
                 // A surface container using the 'background' color from the theme
                 Surface(modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background) {
-                    Greeting("Android")
+                    
                 }
             }
         }
     }
 }
-
 @Composable
-fun Greeting(name: String) {
-    Surface(color = Color.Green) {
-        Text(text = "Hi, my name is $name!", modifier = Modifier.padding(24.dp))
-    }
+fun BirthdayGreetingWithText(message: String, from: String) {
+    // fungsi text, mengubah ukuran text ke 36 sp
+    Text(text = message,
+    fontSize = 36.sp
+    )
+    Text(text = from,
+    fontSize = 24.sp
+    )
 }
 
-@Preview(showBackground = true)
+// ini hanya fungsi preview bukan tampilan asli di device nanti
+@Preview(showBackground = true, showSystemUi = true)
 @Composable
-fun DefaultPreview() {
+fun BirthDayCardPreview() {
     MyGreetingCardTheme {
-        Greeting("Andi")
+        // memanggil fungsi BirthdayGreetingWithText untuk menampilkan pesan text
+        BirthdayGreetingWithText(message = "Happy Birthday Sam!", from = "- from Andi")
     }
 }
