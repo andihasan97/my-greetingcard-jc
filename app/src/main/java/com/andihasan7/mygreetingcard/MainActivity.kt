@@ -27,7 +27,8 @@ class MainActivity : ComponentActivity() {
                 Surface(modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background) {
                     // memanggil fungsi BirthdayGreetingWithImage untuk menampilkan di real device
-                    BirthdayGreetingWithImage(message = "Happy Birthday Sam!", from = "- from Andi")
+                    BirthdayGreetingWithImage(message = getString(R.string.happy_birthday_text), from = getString(
+                                            R.string.signature_text))
                 }
             }
         }
