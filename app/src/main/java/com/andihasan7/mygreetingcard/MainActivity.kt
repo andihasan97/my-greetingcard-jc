@@ -22,7 +22,8 @@ class MainActivity : ComponentActivity() {
                 // A surface container using the 'background' color from the theme
                 Surface(modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background) {
-                    
+                    // memanggil fungsi BirthdayGreetingWithText untuk menampilkan di real device
+                    BirthdayGreetingWithText(message = "Happy Birthday Sam!", from = "- from Andi")
                 }
             }
         }
